@@ -1,11 +1,7 @@
-import { ProvideAuth } from '../lib/auth';
-
+import 'styles/globals.css';
+import 'styles/tailwind.css';
 function MyApp({ Component, pageProps }) {
-  return (
-    <ProvideAuth>
-      <Component {...pageProps} />
-    </ProvideAuth>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
