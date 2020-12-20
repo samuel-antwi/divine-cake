@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Squash as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import SideNav from './SideNav';
+import { RiCakeFill } from 'react-icons/ri';
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -16,12 +17,16 @@ const Navbar = () => {
   return (
     <>
       {isOpen && <SideNav setOpen={setOpen} isOpen={isOpen} />}
-      <Div className='bg-white text-gray-800 py-10 '>
+      <Div className='bg-white text-gray-800 py-6 '>
         <div className='container mx-auto px-6'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-center'>
             <Link href='/'>
-              <a className='logo text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wider'>
-                DIVINECAKE
+              <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wide'>
+                <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
+                <div className='flex items-center'>
+                  <span className='text-gray-500 mr-2'>DIVINE</span>{' '}
+                  <span className='cake'>CAKE</span>
+                </div>
               </a>
             </Link>
             <div className='nav__links hidden md:block'>
@@ -59,7 +64,12 @@ const Navbar = () => {
               </Link>
             </div>
             <div className='flex items-center md:hidden'>
-              <Hamburger toggled={isOpen} toggle={setOpen} duration={0.8} />
+              <Hamburger
+                toggled={isOpen}
+                toggle={setOpen}
+                duration={0.8}
+                size={25}
+              />
               <p className='ml-1'>Menu</p>
             </div>
           </div>
@@ -72,9 +82,6 @@ const Navbar = () => {
 export default Navbar;
 
 const Div = styled.div`
-  .logo {
-    font-family: 'Langar', cursive;
-  }
   .nav__links a {
     margin: 0 20px;
   }

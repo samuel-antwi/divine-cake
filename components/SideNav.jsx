@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Squash as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { RiCakeFill } from 'react-icons/ri';
 
 const SideNav = ({ setOpen, isOpen }) => {
   //   const [isOpen, setOpen] = useState(false);
@@ -26,8 +27,12 @@ const SideNav = ({ setOpen, isOpen }) => {
           className='nav__links w-10/12 bg-white  min-h-screen'>
           <div className='flex items-center p-4 justify-between'>
             <Link href='/'>
-              <a className='logo text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wider'>
-                DIVINECAKE
+              <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wide'>
+                <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
+                <div className='flex items-center'>
+                  <span className='text-gray-500 mr-2'>DIVINE</span>{' '}
+                  <span className='cake'>CAKE</span>
+                </div>
               </a>
             </Link>
             <Hamburger
@@ -37,7 +42,7 @@ const SideNav = ({ setOpen, isOpen }) => {
               size={25}
             />
           </div>
-          <div className='flex flex-col p-5'>
+          <div onClick={() => setOpen()} className='flex flex-col p-5'>
             <Link href='/'>
               <a
                 className={`font-bold text-xl mb-10 hover:text-yellow-600 ${
@@ -85,10 +90,6 @@ const Div = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-  }
-
-  .logo {
-    font-family: 'Langar', cursive;
   }
 
   .nav__links {
