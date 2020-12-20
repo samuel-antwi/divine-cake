@@ -16,11 +16,15 @@ const TopNavbar = () => {
           <div className='flex  mb-5 md:mb-0'>
             <div className='flex items-center mr-3'>
               <ImPhone className='mr-2' />
-              <p className='font-bold'>0243562686</p>
+              <a className='font-bold' href='tel: 0243562686'>
+                0243562686
+              </a>
             </div>
-            <div className='flex items-center'>
+            <div className='hidden md:flex items-center'>
               <FaRegEnvelope className='mr-2' />
-              <p className='font-bold'>divinecake@gmail.com</p>
+              <a className='font-bold' href='mailto: divinecake@gmail.com'>
+                divinecake@gmail.com
+              </a>
             </div>
           </div>
           <div className=' flex items-center px-4'>

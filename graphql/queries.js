@@ -9,5 +9,9 @@ export const HERO_PAGE = gql`
       }
       title
     }
+    services {
+      title
+      description
+    }
   }
 `;

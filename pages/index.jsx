@@ -7,7 +7,7 @@ import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
 import styled from 'styled-components';
 import MainServices from 'components/MainServices';
 
-export default function Home({ page }) {
+export default function Home({ page, services }) {
   const [heroImage, setHeroImage] = useState('');
   const { title, description, image } = page;
 
@@ -26,23 +26,26 @@ export default function Home({ page }) {
                 {title}
               </h1>
               <p className='md:text-2xl md:mb-10 mb-5'>{description}</p>
-              <button className='md:text-2xl font-bold bg-yellow-700 md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
+              <button className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
                 View Our Cakes
               </button>
             </div>
           </div>
         </div>
       </Div>
-      <MainServices />
+      <MainServices services={services} />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const { page } = await grapgcms.request(HERO_PAGE, { slug: 'home-page' });
+  const { page, services } = await grapgcms.request(HERO_PAGE, {
+    slug: 'home-page',
+  });
   return {
     props: {
       page,
+      services,
     },
   };
 };
@@ -60,10 +63,14 @@ const Div = styled.div`
     background: rgba(0, 0, 0, 0.5);
   }
 
+  .hero__btn {
+    background: #d15732;
+  }
+
   @media (max-width: 600px) {
-    height: 50vh;
+    height: 400px;
     .overlay {
-      height: 50vh;
+      height: 400px;
     }
   }
 `;
