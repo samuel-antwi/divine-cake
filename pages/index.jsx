@@ -1,31 +1,30 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Layout from 'components/Layout';
-import grapgcms from 'graphql/client';
-import { HERO_PAGE } from 'graphql/queries';
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+import graphcms from 'graphql/client';
+import { PRODUCTS } from 'graphql/queries';
 import styled from 'styled-components';
 import MainServices from 'components/MainServices';
+import FeaturedProducts from 'components/FeaturedProducts';
+import Link from 'next/link';
 
-export default function Home({ page, services }) {
-  const [heroImage, setHeroImage] = useState('');
-  const { title, description, image } = page;
-
+export default function Home({ products }) {
   return (
     <Layout>
-      <Div
-        style={{
-          backgroundImage: `url(${image.url}) `,
-        }}
-        className='hero text-white bg-cover bg-center bg-no-repeat relative'>
+      <Div className='hero text-white bg-cover bg-center bg-no-repeat relative'>
         <div className='overlay absolute'></div>
         <div className='container'>
           <div className='absolute md:inset-0 p-4 flex items-center justify-center'>
             <div className='max-h-full max-w-4xl '>
               <h1 className='title text-2xl tracking-wider md:text-7xl font-extrabold text-gray-100 mb-5'>
-                {title}
+                The Best Cakes and Bread
               </h1>
-              <p className='md:text-2xl md:mb-10 mb-5'>{description}</p>
+              <p className='md:text-2xl md:mb-10 mb-5'>
+                Are you looking for one of the best cakes to celebrate your
+                anniversary? You have come to the right place. With Divine Cake,
+                we make sure the cake you cut today remains a memorable moment
+                just as the occassion you are celebrating.
+              </p>
               <button className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
                 View Our Cakes
               </button>
@@ -33,24 +32,23 @@ export default function Home({ page, services }) {
           </div>
         </div>
       </Div>
-      <MainServices services={services} />
+      <MainServices />
+      <FeaturedProducts products={products} />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const { page, services } = await grapgcms.request(HERO_PAGE, {
-    slug: 'home-page',
-  });
+  const { products } = await graphcms.request(PRODUCTS);
   return {
     props: {
-      page,
-      services,
+      products,
     },
   };
 };
 
 const Div = styled.div`
+  background: url('/img/hero-bg.jpg');
   height: 70vh;
   background-attachment: fixed;
   .title {
