@@ -39,5 +39,9 @@ export const GET_PRODUCT = gql`
         }
       }
     }
+    services {
+      title
+      description
+    }
   }
 `;

@@ -94,3 +94,24 @@ const Div = styled.div`
     }
   }
 `;
+
+{
+  /* <div className='col-span-1 border border-white p-5'>
+                <h1 className='md:text-2xl text-xl font-bold mb-5'>
+                  Party Cakes
+                </h1>
+                <p className='md:text-lg'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  exercitationem nam ad eum, iure ab ratione expedita minima?
+                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
+                </p>
+              </div>
+              <div className='col-span-1 border border-white p-5'>
+                <h1 className='md:text-2xl text-xl font-bold mb-5'>Pastries</h1>
+                <p className='md:text-lg'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  exercitationem nam ad eum, iure ab ratione expedita minima?
+                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
+                </p>
+              </div> */
+}
