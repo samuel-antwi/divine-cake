@@ -11,6 +11,17 @@ export const PRODUCTS = gql`
         url
       }
     }
+    testimonies {
+      rating
+      name
+      id
+      review {
+        text
+      }
+      image {
+        url
+      }
+    }
   }
 `;
 
