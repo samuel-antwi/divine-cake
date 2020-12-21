@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import MainServices from 'components/MainServices';
 import FeaturedProducts from 'components/FeaturedProducts';
 import Link from 'next/link';
+import SpecialCake from 'components/SpecialCake';
 
 export default function Home({ products }) {
   return (
@@ -34,6 +35,7 @@ export default function Home({ products }) {
       </Div>
       <MainServices />
       <FeaturedProducts products={products} />
+      <SpecialCake />
     </Layout>
   );
 }

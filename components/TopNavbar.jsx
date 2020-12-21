@@ -31,7 +31,7 @@ const TopNavbar = () => {
             <div>
               <a href='/'>
                 <FaFacebookSquare
-                  className='w-10 h-10 social__links  rounded-full p-2'
+                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 '
                   size={20}
                 />
               </a>
@@ -39,7 +39,7 @@ const TopNavbar = () => {
             <div className='mx-5'>
               <a href='/'>
                 <FaInstagram
-                  className='w-10 h-10 social__links  rounded-full p-2'
+                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
                   size={20}
                 />
               </a>
@@ -47,7 +47,7 @@ const TopNavbar = () => {
             <div>
               <a href='/'>
                 <FaTwitter
-                  className='w-10 h-10 social__links  rounded-full p-2'
+                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
                   size={20}
                 />
               </a>
