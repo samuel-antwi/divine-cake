@@ -20,7 +20,7 @@ const FeaturedProducts = ({ products }) => {
           {products.map((product) => (
             <div
               key={product.id}
-              className=' mb-5 shadow-lg transition duration-300 ease-in-out border-b-4 border-yellow-700  transform hover:-translate-y-1 hover:scale-95 '>
+              className=' mb-5 shadow-lg transition duration-300 ease-in-out border-b-4 border-yellow-700  transform hover:-translate-y-1 hover:scale-105 '>
               <Link href={`/cakes/${product.slug}`}>
                 <a>
                   <Image
@@ -46,4 +46,10 @@ export default FeaturedProducts;
 
 const Div = styled.div`
   font-family: 'Playfair Display', serif;
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-slide > div {
+    padding: 0 10px;
+  }
 `;

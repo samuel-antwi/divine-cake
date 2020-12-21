@@ -8,8 +8,9 @@ import MainServices from 'components/MainServices';
 import FeaturedProducts from 'components/FeaturedProducts';
 import Link from 'next/link';
 import SpecialCake from 'components/SpecialCake';
+import Testimony from 'components/Testimony';
 
-export default function Home({ products }) {
+export default function Home({ products, testimonies }) {
   return (
     <Layout>
       <Div className='hero text-white bg-cover bg-center bg-no-repeat relative'>
@@ -36,15 +37,17 @@ export default function Home({ products }) {
       <MainServices />
       <FeaturedProducts products={products} />
       <SpecialCake />
+      <Testimony testimonies={testimonies} />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const { products } = await graphcms.request(PRODUCTS);
+  const { products, testimonies } = await graphcms.request(PRODUCTS);
   return {
     props: {
       products,
+      testimonies,
     },
   };
 };
