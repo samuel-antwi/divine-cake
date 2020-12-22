@@ -50,7 +50,7 @@ const Testimony = ({ testimonies }) => {
   return (
     <Div className='bg-gray-200'>
       <div className='container py-10 mx-auto '>
-        <h1 className='md:text-5xl text-2xl font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
+        <h1 className='md:text-4xl text-2xl font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
           What Our Customers Are Saying
         </h1>
         <Slider {...settings}>

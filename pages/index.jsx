@@ -9,6 +9,7 @@ import FeaturedProducts from 'components/FeaturedProducts';
 import Link from 'next/link';
 import SpecialCake from 'components/SpecialCake';
 import Testimony from 'components/Testimony';
+import Footer from 'components/Footer';
 
 export default function Home({ products, testimonies }) {
   return (
