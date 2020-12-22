@@ -24,7 +24,7 @@ const Navbar = () => {
               <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wide'>
                 <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
                 <div className='flex items-center'>
-                  <span className='text-gray-500 mr-2'>DIVINE</span>{' '}
+                  <span className='text-gray-500 mr-2'>DEVINE</span>{' '}
                   <span className='cake'>CAKE</span>
                 </div>
               </a>
@@ -84,5 +84,8 @@ export default Navbar;
 const Div = styled.div`
   .nav__links a {
     margin: 0 20px;
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
   }
 `;
