@@ -36,8 +36,8 @@ const Footer = () => {
   return (
     <Div className='relative'>
       <div className='text-white container  divide-y'>
-        <div className='lg:grid lg:grid-cols-3 gap-10 md:py-20 py-10'>
-          <div className='col-span-1 mb-8'>
+        <div className='lg:grid lg:grid-cols-5 gap-20 md:py-20 py-10'>
+          <div className='col-span-2 mb-8'>
             <Link href='/'>
               <a className='logo flex items-center  mb-5 footer__logo'>
                 <RiCakeFill className='mr-2' size={60} />
