@@ -14,7 +14,7 @@ const About = ({ about, testimonies }) => {
         <div className='relative wrapper'>
           <div className='overlay'>
             <div className='container'>
-              <p className='hero__title md:text-5xl text-2xl font-bold tracking-wide text-white absolute flex justify-center items-center inset-0'>
+              <p className='hero__title md:text-5xl text-3xl font-bold tracking-wide text-white absolute flex justify-center items-center inset-0'>
                 About us
               </p>
             </div>

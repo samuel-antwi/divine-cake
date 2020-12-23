@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
       {isOpen && <SideNav setOpen={setOpen} isOpen={isOpen} />}
       <Div className='bg-white text-gray-800 py-6 '>
-        <div className='container mx-auto px-6'>
+        <div className='md:w-10/12 mx-auto px-4'>
           <div className='flex justify-between items-center'>
             <Link href='/'>
               <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl tracking-wide'>
