@@ -23,7 +23,7 @@ const TopNavbar = () => {
             <div className='hidden md:flex items-center'>
               <FaRegEnvelope className='mr-2' />
               <a className='font-bold' href='mailto: divinecake@gmail.com'>
-                devinecake@gmail.com
+                info@devinecakesgh.com
               </a>
             </div>
           </div>

@@ -14,7 +14,10 @@ export default function MainServices({ services }) {
               Our Main Services
             </h1>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 text-white gap-5'>
-              <div className='col-span-1 border border-white p-5 '>
+              <div
+                data-aos='flip-right'
+                data-aos-duration={2000}
+                className='col-span-1 border border-white p-5 '>
                 <h1 className='md:text-2xl text-xl font-bold mb-5'>
                   Celebration Cakes
                 </h1>
@@ -25,7 +28,10 @@ export default function MainServices({ services }) {
                   Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
                 </p>
               </div>
-              <div className='col-span-1 border border-white p-5 '>
+              <div
+                data-aos='flip-left'
+                data-aos-duration={2000}
+                className='col-span-1 border border-white p-5 '>
                 <h1 className='md:text-2xl text-xl font-bold mb-5'>Pastries</h1>
                 <GiCakeSlice size={60} className='md:mb-10 mb-5' />
                 <p className='md:text-lg'>
@@ -34,7 +40,10 @@ export default function MainServices({ services }) {
                   Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
                 </p>
               </div>
-              <div className='col-span-1 border border-white p-5 '>
+              <div
+                data-aos='flip-right'
+                data-aos-duration={2000}
+                className='col-span-1 border border-white p-5 '>
                 <h1 className='md:text-2xl text-xl font-bold mb-5'>
                   Party Cakes
                 </h1>
@@ -45,25 +54,6 @@ export default function MainServices({ services }) {
                   Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
                 </p>
               </div>
-              {/* {services.map((service) => (
-                <div
-                  key={service.title}
-                  className='col-span-1 border border-white p-5'>
-                  {service.title === 'Celebration Cakes' && (
-                    <FaBirthdayCake size={60} className='md:mb-10 mb-5' />
-                  )}
-                  {service.title === 'Pastries' && (
-                    <GiCakeSlice size={60} className='md:mb-10 mb-5' />
-                  )}
-                  {service.title === 'Party Cakes' && (
-                    <MdCake size={60} className='md:mb-10 mb-5' />
-                  )}
-                  <h1 className='md:text-2xl text-xl font-bold mb-5'>
-                    {service.title}
-                  </h1>
-                  <p className='md:text-lg'>{service.description}</p>
-                </div>
-              ))} */}
             </div>
           </div>
         </div>
