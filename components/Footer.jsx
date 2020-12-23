@@ -99,7 +99,7 @@ const Footer = () => {
             </div>
             <div className='flex items-center text-gray-300'>
               <FaRegEnvelope className='mr-2' />
-              <a href='mailto: info@devinecake.com'>info@devinecake.com</a>
+              <a href='mailto: info@devinecake.com'>info@devinecakesgh.com</a>
             </div>
             <p>Accra</p>
           </div>

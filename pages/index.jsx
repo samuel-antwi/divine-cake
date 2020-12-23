@@ -10,6 +10,7 @@ import Link from 'next/link';
 import SpecialCake from 'components/SpecialCake';
 import Testimony from 'components/Testimony';
 import Footer from 'components/Footer';
+import AOS from 'aos';
 
 export default function Home({ products, testimonies }) {
   return (
@@ -17,7 +18,10 @@ export default function Home({ products, testimonies }) {
       <Div className='hero text-white bg-cover bg-center bg-no-repeat relative'>
         <div className='overlay absolute'></div>
         <div className='container'>
-          <div className='absolute md:inset-0 p-4 flex items-center justify-center'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration={2000}
+            className='absolute md:inset-0 p-4 flex items-center justify-center'>
             <div className='max-h-full max-w-4xl '>
               <h1 className='title text-2xl tracking-wider md:text-7xl font-extrabold text-gray-100 mb-5'>
                 The Best Cakes and Bread
@@ -64,7 +68,7 @@ const Div = styled.div`
   .overlay {
     width: 100%;
     height: 70vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   .hero__btn {

@@ -52,3 +52,35 @@ export const GET_PRODUCT = gql`
     }
   }
 `;
+
+export const ABOUT_PAGE = gql`
+  query queryAboutPage($slug: String!) {
+    about(where: { slug: $slug }) {
+      description {
+        text
+      }
+      id
+      missionStatement {
+        text
+      }
+      slug
+      title
+      missionTitle
+      images {
+        id
+        url
+      }
+    }
+    testimonies {
+      rating
+      name
+      id
+      review {
+        text
+      }
+      image {
+        url
+      }
+    }
+  }
+`;
