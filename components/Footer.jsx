@@ -43,7 +43,7 @@ const Footer = () => {
                 <RiCakeFill className='mr-2' size={60} />
                 <div className='flex items-center font-extrabold md:text-4xl text-xl tracking-wide '>
                   <span className=' text-white mr-2'>DEVINE</span>{' '}
-                  <span className='cake'>CAKE</span>
+                  <span className='cake'>CAKESGH</span>
                 </div>
               </a>
             </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
         <div className='border border-gray-600 w-full'></div>
         <div className='py-10 text-center text-gray-500 text-lg'>
-          <p>&copy; Copyright 2020 antwistudioweb</p>
+          <p>&copy; Copyright 2020 devinecakesgh</p>
         </div>
       </div>
       {isTop && (

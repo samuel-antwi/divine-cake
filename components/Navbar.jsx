@@ -21,11 +21,11 @@ const Navbar = () => {
         <div className='container mx-auto px-6'>
           <div className='flex justify-between items-center'>
             <Link href='/'>
-              <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl text-xl tracking-wide'>
+              <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl tracking-wide'>
                 <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
                 <div className='flex items-center'>
                   <span className='text-gray-500 mr-2'>DEVINE</span>{' '}
-                  <span className='cake'>CAKE</span>
+                  <span className='cake'>CAKESGH</span>
                 </div>
               </a>
             </Link>
@@ -33,7 +33,9 @@ const Navbar = () => {
               <Link href='/'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600 ${
-                    home ? 'text-yellow-600' : 'text-gray-700'
+                    home
+                      ? 'text-yellow-600 border-b-2 border-yellow-600'
+                      : 'text-gray-700'
                   }`}>
                   Home
                 </a>
@@ -41,7 +43,9 @@ const Navbar = () => {
               <Link href='/about'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600  ${
-                    about ? 'text-yellow-600' : 'text-gray-700'
+                    about
+                      ? 'text-yellow-600 border-b-2 border-yellow-600'
+                      : 'text-gray-700'
                   } `}>
                   About
                 </a>
@@ -49,7 +53,9 @@ const Navbar = () => {
               <Link href='/services'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600  ${
-                    services ? 'text-yellow-600' : 'text-gray-700'
+                    services
+                      ? 'text-yellow-600 border-b-2 border-yellow-600'
+                      : 'text-gray-700'
                   }`}>
                   Services
                 </a>
@@ -57,7 +63,9 @@ const Navbar = () => {
               <Link href='/contact'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600  ${
-                    contact ? 'text-yellow-600' : 'text-gray-700'
+                    contact
+                      ? 'text-yellow-600 border-b-2 border-yellow-600'
+                      : 'text-gray-700'
                   } `}>
                   Contact
                 </a>

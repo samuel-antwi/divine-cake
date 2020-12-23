@@ -21,16 +21,16 @@ export default function Home({ products, testimonies }) {
           <div
             data-aos='fade-up'
             data-aos-duration={2000}
-            className='absolute md:inset-0 p-4 flex items-center justify-center'>
-            <div className='max-h-full max-w-4xl '>
+            className='absolute inset-0 px-6 md:w-10/12 2xl:w-7/12 mx-auto flex items-center justify-center '>
+            <div>
               <h1 className='title text-2xl tracking-wider md:text-7xl font-extrabold text-gray-100 mb-5'>
-                The Best Cakes and Bread
+                The Best Cakes and Pastries
               </h1>
-              <p className='md:text-2xl md:mb-10 mb-5'>
+              <p className='md:text-2xl text-gray-300 md:mb-10 mb-5'>
                 Are you looking for one of the best cakes to celebrate your
                 anniversary? You have come to the right place. With Divine Cake,
-                we make sure the cake you cut today remains a memorable moment
-                just as the occassion you are celebrating.
+                we make sure the cake you cut today leaves you with a memorable
+                moment just as the occassion you are celebrating.
               </p>
               <button className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
                 View Our Cakes
@@ -39,9 +39,9 @@ export default function Home({ products, testimonies }) {
           </div>
         </div>
       </Div>
-      <MainServices />
       <FeaturedProducts products={products} />
       <SpecialCake />
+      <MainServices />
       <Testimony testimonies={testimonies} />
     </Layout>
   );
