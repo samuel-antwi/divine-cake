@@ -10,8 +10,6 @@ import { BsStar, BsStarFill } from 'react-icons/bs';
 import { FaQuoteLeft } from 'react-icons/fa';
 
 const Testimony = ({ testimonies }) => {
-  console.log(testimonies);
-
   const settings = {
     className: 'slider variable-width',
     infinite: true,
@@ -30,7 +28,7 @@ const Testimony = ({ testimonies }) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -49,10 +47,13 @@ const Testimony = ({ testimonies }) => {
 
   return (
     <Div className='bg-gray-200'>
-      <div className='container py-10 mx-auto '>
-        <h1 className='md:text-5xl text-2xl font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
-          What Our Customers Are Saying
-        </h1>
+      <div className='container py-10 mx-auto'>
+        <div className='mb-5'>
+          <h1 className='md:text-4xl text-2xl font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
+            What Our Customers Are Saying
+          </h1>
+          <div className='max-w-sm mx-auto w-20 h-1 bg-gray-600'></div>
+        </div>
         <Slider {...settings}>
           {testimonies.map((testimony) => (
             <div className=' bg-white p-5 shadow-xl ' key={testimony.id}>
@@ -71,7 +72,7 @@ const Testimony = ({ testimonies }) => {
                 stop={5}
                 start={0}
                 readonly={true}
-                fullSymbol={<BsStarFill />}
+                fullSymbol={<BsStarFill size={20} />}
                 initialRating={testimony.rating}
                 emptySymbol={<BsStar size={20} />}
               />

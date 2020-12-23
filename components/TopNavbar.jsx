@@ -5,54 +5,31 @@ import {
   FaInstagram,
   FaTwitter,
   FaRegEnvelope,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import styled from 'styled-components';
+import ReactTooltip from 'react-tooltip';
 
 const TopNavbar = () => {
   return (
     <Div className='text-gray-100 py-5'>
-      <div className='container'>
-        <div className='md:flex md:justify-between'>
-          <div className='flex  mb-5 md:mb-0'>
+      <div className='container '>
+        <div className='md:flex md:justify-between '>
+          <div className='flex xs:text-xs md:text-lg mb-5 md:mb-0'>
             <div className='flex items-center mr-3'>
               <ImPhone className='mr-2' />
               <a className='font-bold' href='tel: 0243562686'>
-                0243562686
+                0269822198
               </a>
             </div>
-            <div className='hidden md:flex items-center'>
+            <div className='flex items-center'>
               <FaRegEnvelope className='mr-2' />
               <a className='font-bold' href='mailto: divinecake@gmail.com'>
-                divinecake@gmail.com
+                info@devinecakesgh.com
               </a>
             </div>
           </div>
-          <div className=' flex items-center px-4'>
-            <div>
-              <a href='/'>
-                <FaFacebookSquare
-                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 '
-                  size={20}
-                />
-              </a>
-            </div>
-            <div className='mx-5'>
-              <a href='/'>
-                <FaInstagram
-                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
-                  size={20}
-                />
-              </a>
-            </div>
-            <div>
-              <a href='/'>
-                <FaTwitter
-                  className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
-                  size={20}
-                />
-              </a>
-            </div>
-          </div>
+          <SocialMediaIcons />
         </div>
       </div>
     </Div>
@@ -61,9 +38,46 @@ const TopNavbar = () => {
 
 export default TopNavbar;
 
-const Div = styled.div`
-  background: #4c2a2c;
+export const SocialMediaIcons = () => {
+  return (
+    <SocilaMediaStyles>
+      <div className='flex items-center px-4 justify-center  justify-items-center'>
+        <div>
+          <a data-tip='Facebook' href='/'>
+            <FaFacebookSquare
+              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 '
+              size={20}
+            />
+          </a>
+        </div>
+        <div className='mx-5'>
+          <a data-tip='Instagram' href='/'>
+            <FaInstagram
+              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
+              size={20}
+            />
+          </a>
+        </div>
+        <div>
+          <a data-tip='WhatsApp' href='https://wa.me/233269822198'>
+            <FaWhatsapp
+              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
+              size={20}
+            />
+          </a>
+        </div>
+      </div>
+      <ReactTooltip />
+    </SocilaMediaStyles>
+  );
+};
+
+const SocilaMediaStyles = styled.div`
   .social__links {
     background: #de5932;
   }
+`;
+
+const Div = styled.div`
+  background: #4c2a2c;
 `;
