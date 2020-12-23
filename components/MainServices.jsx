@@ -23,9 +23,10 @@ export default function MainServices({ services }) {
                 </h1>
                 <FaBirthdayCake size={60} className='md:mb-10 mb-5' />
                 <p className='md:text-lg'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  exercitationem nam ad eum, iure ab ratione expedita minima?
-                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
+                  Our Celebration cakes include, wedding, birthday, graduation
+                  and and all sort of anniversary. Our expert chefs can design
+                  your cake to suite any event. Just get in touch to see what we
+                  can do for you.
                 </p>
               </div>
               <div
