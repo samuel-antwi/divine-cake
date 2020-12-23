@@ -9,9 +9,9 @@ import { slickSettings } from 'functions/slick';
 const FeaturedProducts = ({ products }) => {
   return (
     <Div className='md:py-10'>
-      <div className='container'>
+      <div className='px-6 md:w-10/12'>
         <h1 className='md:text-6xl text-2xl font-bold  pt-5 md:mb-5 text-yellow-900'>
-          Our Featured Cakes
+          Our Featured Products
         </h1>
         <div className=' mb-5'>
           <div className='w-24 h-1 bg-yellow-900'></div>

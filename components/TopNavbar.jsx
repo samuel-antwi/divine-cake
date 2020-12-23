@@ -13,9 +13,9 @@ import ReactTooltip from 'react-tooltip';
 const TopNavbar = () => {
   return (
     <Div className='text-gray-100 py-5'>
-      <div className='container '>
+      <div className='md:w-10/12 mx-auto px-2'>
         <div className='md:flex md:justify-between '>
-          <div className='flex xs:text-xs md:text-lg mb-5 md:mb-0'>
+          <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0'>
             <div className='flex items-center mr-3'>
               <ImPhone className='mr-2' />
               <a className='font-bold' href='tel: 0243562686'>
@@ -44,26 +44,17 @@ export const SocialMediaIcons = () => {
       <div className='flex items-center px-4 justify-center  justify-items-center'>
         <div>
           <a data-tip='Facebook' href='/'>
-            <FaFacebookSquare
-              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 '
-              size={20}
-            />
+            <FaFacebookSquare className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 ' />
           </a>
         </div>
         <div className='mx-5'>
           <a data-tip='Instagram' href='/'>
-            <FaInstagram
-              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
-              size={20}
-            />
+            <FaInstagram className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105' />
           </a>
         </div>
         <div>
           <a data-tip='WhatsApp' href='https://wa.me/233269822198'>
-            <FaWhatsapp
-              className='w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
-              size={20}
-            />
+            <FaWhatsapp className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105' />
           </a>
         </div>
       </div>
