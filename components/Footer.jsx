@@ -17,15 +17,13 @@ const Footer = () => {
   const [isTop, setIsTop] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const unSubscribe = window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         setIsTop(true);
       } else {
         setIsTop(false);
       }
-      return () => {
-        window.removeEventListener('scroll');
-      };
+      return () => unSubscribe();
     });
   }, []);
 
@@ -42,14 +40,14 @@ const Footer = () => {
               <a className='logo flex items-center  mb-5 footer__logo'>
                 <RiCakeFill className='mr-2' size={60} />
                 <div className='flex items-center font-extrabold md:text-4xl text-xl tracking-wide '>
-                  <span className=' text-white mr-2'>DEVINE</span>{' '}
+                  <span className=' text-white'>DEVINE</span>
                   <span className='cake'>CAKESGH</span>
                 </div>
               </a>
             </Link>
             <p className='text-gray-300 text-lg mb-5'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              magni. Nisi animi beatae perspiciatis.
+              Cupcakes, custom cakes from the finest ingredients. All cakes are
+              made from scratch. Our prices are wholesale prices and unbeatable.
             </p>
             <div className=' flex items-center px-4'>
               <div>
@@ -94,11 +92,9 @@ const Footer = () => {
               Contact Info
             </h1>
             <div className='flex items-center mb-2 '>
-              <ImPhone className='mr-2' />
-              <a href='tel: +233246562686'>0269822198</a>
+              <a href='tel: +233246562686'>(+233) 269822198</a>
             </div>
             <div className='flex items-center text-gray-300'>
-              <FaRegEnvelope className='mr-2' />
               <a href='mailto: info@devinecake.com'>info@devinecakesgh.com</a>
             </div>
             <p>Accra</p>
@@ -122,10 +118,12 @@ const Footer = () => {
 export default Footer;
 
 const Div = styled.div`
-  font-family: 'Playfair Display', serif;
   background: #302b27;
   .footer__logo,
   .cake {
     color: #de5932;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
   }
 `;

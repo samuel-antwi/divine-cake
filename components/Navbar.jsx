@@ -24,7 +24,7 @@ const Navbar = () => {
               <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl tracking-wide'>
                 <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
                 <div className='flex items-center'>
-                  <span className='text-gray-500 mr-2'>DEVINE</span>{' '}
+                  <span className='text-gray-500'>DEVINE</span>
                   <span className='cake'>CAKESGH</span>
                 </div>
               </a>

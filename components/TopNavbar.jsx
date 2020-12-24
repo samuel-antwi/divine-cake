@@ -18,7 +18,12 @@ const TopNavbar = () => {
           <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0'>
             <div className='flex items-center mr-3'>
               <ImPhone className='mr-2' />
-              <a className='font-bold' href='tel: 0243562686'>
+              <a
+                className='font-bold hidden md:block'
+                href='tel: +233269822198'>
+                (+233) 269822198
+              </a>
+              <a className='font-bold md:hidden' href='tel: 0243562686'>
                 0269822198
               </a>
             </div>
@@ -61,7 +66,11 @@ export const SocialMediaIcons = () => {
           </a>
         </div>
         <div>
-          <a data-tip='WhatsApp' href='https://wa.me/233269822198'>
+          <a
+            data-tip='WhatsApp'
+            href='https://wa.me/233269822198'
+            target='_blank'
+            rel='noreferrer noopener'>
             <FaWhatsapp className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105' />
           </a>
         </div>
