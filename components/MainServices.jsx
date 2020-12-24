@@ -15,7 +15,7 @@ export default function MainServices({ services }) {
             </h1>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 text-white gap-5'>
               <div
-                data-aos='flip-right'
+                data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
                 <h1 className='md:text-2xl text-xl font-bold mb-5'>
@@ -42,7 +42,7 @@ export default function MainServices({ services }) {
                 </p>
               </div>
               <div
-                data-aos='flip-right'
+                data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
                 <h1 className='md:text-2xl text-xl font-bold mb-5'>

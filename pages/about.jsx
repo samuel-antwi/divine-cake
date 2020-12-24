@@ -7,7 +7,6 @@ import Testimony from 'components/Testimony';
 
 const About = ({ about, testimonies }) => {
   const { images, title, missionTitle, description, missionStatement } = about;
-  console.log(about);
   return (
     <Layout title='About'>
       <Div>
@@ -20,11 +19,13 @@ const About = ({ about, testimonies }) => {
             </div>
           </div>
         </div>
-        <div className='py-10 w-full md:w-10/12 xl:w-8/12 mx-auto px-6'>
+        <div className='py-10 w-full md:w-10/12 xl:w-8/12 mx-auto '>
           <h1 className='capitalize md:text-5xl text-3xl font-bold text-yellow-900 text-center mb-10'>
             {title}
           </h1>
-          <p className='text-lg text-gray-700 mb-10'>{description.text}</p>
+          <p className='text-lg text-gray-700 mb-10 px-6 md:px-0'>
+            {description.text}
+          </p>
           <div className='md:grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {images.map((image) => (
               <div key={image.id} className='mb-5 col-span-1'>
@@ -37,17 +38,18 @@ const About = ({ about, testimonies }) => {
               </div>
             ))}
           </div>
-          <div className='py-10'>
-            <div className='md:grid md:grid-cols-3 gap-10'>
+          <div
+            data-aos='zoom-in'
+            data-aos-transition-duration={2000}
+            className='py-10 bg-gray-900 text-gray-300'>
+            <div className='md:grid md:grid-cols-3 gap-10 px-6'>
               <div className='col-span-1 mb-5'>
                 <h1 className=' md:text-4xl text-2xl mb-5 tracking-wide text-yellow-900 font-bold capitalize'>
                   {missionTitle}
                 </h1>
                 <div className='w-20 h-1 bg-gray-600'></div>
               </div>
-              <p className='col-span-2 text-lg text-gray-700'>
-                {missionStatement.text}
-              </p>
+              <p className='col-span-2 text-lg '>{missionStatement.text}</p>
             </div>
           </div>
         </div>
