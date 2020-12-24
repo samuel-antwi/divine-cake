@@ -43,12 +43,20 @@ export const SocialMediaIcons = () => {
     <SocilaMediaStyles>
       <div className='flex items-center px-4 justify-center  justify-items-center'>
         <div>
-          <a data-tip='Facebook' href='/'>
+          <a
+            data-tip='Facebook'
+            href='https://www.facebook.com/search/top?q=devinecakesgh'
+            target='_blank'
+            rel='noreferrer noopener'>
             <FaFacebookSquare className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 ' />
           </a>
         </div>
         <div className='mx-5'>
-          <a data-tip='Instagram' href='/'>
+          <a
+            data-tip='Instagram'
+            href='https://www.instagram.com/devinecakesgh/'
+            target='_blank'
+            rel='noreferrer noopener'>
             <FaInstagram className='xs:w-10 xs:h-10 w-8 h-8 social__links  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105' />
           </a>
         </div>

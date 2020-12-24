@@ -27,10 +27,9 @@ export default function Home({ products, testimonies }) {
                 The Best Cakes and Pastries
               </h1>
               <p className='md:text-2xl text-gray-300 md:mb-10 mb-5'>
-                Are you looking for one of the best cakes to celebrate your
-                anniversary? You have come to the right place. With
-                Divinecakesgh, we make sure the cake you cut today leaves you a
-                special memories just as the occasion you are celebrating.
+                Cupcakes, custom cakes from the finest ingredients. All cakes
+                are made from scratch. Our prices are wholesale prices and
+                unbeatable. Get in touch with us to place your order now.
               </p>
               <button className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
                 View Our Cakes
