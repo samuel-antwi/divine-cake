@@ -6,8 +6,9 @@ import { GrMailOption } from 'react-icons/gr';
 import {
   FaFacebookSquare,
   FaInstagram,
-  FaTwitter,
+  FaWhatsapp,
   FaRegEnvelope,
+  FaFacebookF,
 } from 'react-icons/fa';
 import { ImPhone } from 'react-icons/im';
 import { BsChevronUp } from 'react-icons/bs';
@@ -51,15 +52,21 @@ const Footer = () => {
             </p>
             <div className=' flex items-center px-4'>
               <div>
-                <a href='/'>
-                  <FaFacebookSquare
+                <a
+                  href='https://www.facebook.com/search/top?q=devinecakesgh'
+                  target='_blank'
+                  rel='noreferrer noopener'>
+                  <FaFacebookF
                     className='w-10 h-10 border-white border   rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 '
                     size={20}
                   />
                 </a>
               </div>
               <div className='mx-5'>
-                <a href='/'>
+                <a
+                  href='https://www.instagram.com/devinecakesgh/'
+                  target='_blank'
+                  rel='noreferrer noopener'>
                   <FaInstagram
                     className='w-10 h-10  border border-white  rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
                     size={20}
@@ -67,8 +74,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href='/'>
-                  <FaTwitter
+                <a
+                  href='https://wa.me/233269822198'
+                  target='_blank'
+                  rel='noreferrer noopener'>
+                  <FaWhatsapp
                     className='w-10 h-10   border-white border   rounded-full p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105'
                     size={20}
                   />

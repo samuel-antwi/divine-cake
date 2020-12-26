@@ -31,9 +31,11 @@ export default function Home({ products, testimonies }) {
                 are made from scratch. Our prices are wholesale prices and
                 unbeatable. Get in touch with us to place your order now.
               </p>
-              <button className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
-                View Our Cakes
-              </button>
+              <Link href='/products'>
+                <a className='md:text-2xl font-bold hero__btn md:py-4 px-8 py-2 rounded-full hover:bg-yellow-900'>
+                  View Our Cakes
+                </a>
+              </Link>
             </div>
           </div>
         </div>
