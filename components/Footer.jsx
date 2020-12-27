@@ -133,7 +133,4 @@ const Div = styled.div`
   .cake {
     color: #de5932;
   }
-  h1 {
-    font-family: 'Playfair Display', serif;
-  }
 `;

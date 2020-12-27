@@ -14,7 +14,9 @@ const Product = ({ product }) => {
 export default Product;
 
 export const getStaticPaths = async () => {
-  const { products } = await graphcms.request(PRODUCTS);
+  const { products } = await graphcms.request(PRODUCTS, {
+    type: 'featured-products',
+  });
   return {
     paths: products.map(({ slug }) => ({
       params: {

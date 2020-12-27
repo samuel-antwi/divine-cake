@@ -13,14 +13,14 @@ const About = ({ about, testimonies }) => {
         <div className='relative wrapper'>
           <div className='overlay'>
             <div className='container'>
-              <p className='hero__title md:text-5xl text-3xl font-bold tracking-wide text-white absolute flex justify-center items-center inset-0'>
+              <p className='font-title md:text-5xl text-3xl font-bold tracking-wide text-white absolute flex justify-center items-center inset-0'>
                 About us
               </p>
             </div>
           </div>
         </div>
         <div className='py-10 w-full md:w-10/12 xl:w-8/12 mx-auto '>
-          <h1 className='capitalize md:text-5xl text-3xl font-bold text-yellow-900 text-center mb-10'>
+          <h1 className='capitalize font-title md:text-5xl text-3xl font-bold text-yellow-900 text-center mb-10'>
             {title}
           </h1>
           <p className='text-lg text-gray-700 mb-10 px-6 md:px-0'>
@@ -44,7 +44,7 @@ const About = ({ about, testimonies }) => {
             className='py-10 bg-gray-900 text-gray-300'>
             <div className='md:grid md:grid-cols-3 gap-10 px-6'>
               <div className='col-span-1 mb-5'>
-                <h1 className=' md:text-4xl text-2xl mb-5 tracking-wide text-yellow-900 font-bold capitalize'>
+                <h1 className='font-title md:text-4xl text-2xl mb-5 tracking-wide text-yellow-900 font-bold capitalize'>
                   {missionTitle}
                 </h1>
                 <div className='w-20 h-1 bg-gray-600'></div>
@@ -86,10 +86,5 @@ const Div = styled.div`
   .overlay {
     min-height: 300px;
     background: rgba(0, 0, 0, 0.7);
-  }
-
-  .hero__title,
-  h1 {
-    font-family: 'Playfair Display', serif;
   }
 `;

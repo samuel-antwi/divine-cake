@@ -49,7 +49,7 @@ const Testimony = ({ testimonies }) => {
     <Div className='bg-gray-200'>
       <div className='container py-10 mx-auto'>
         <div className='mb-5'>
-          <h1 className='md:text-4xl text-2xl font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
+          <h1 className='md:text-4xl text-2xl font-title font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
             What Our Customers Are Saying
           </h1>
           <div className='max-w-sm mx-auto w-20 h-1 bg-gray-600'></div>
@@ -94,8 +94,6 @@ const Testimony = ({ testimonies }) => {
 export default Testimony;
 
 const Div = styled.div`
-  font-family: 'Playfair Display', serif;
-
   .slick-list {
     margin: 0 -10px;
   }

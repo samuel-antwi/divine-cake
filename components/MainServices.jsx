@@ -10,7 +10,7 @@ export default function MainServices({ services }) {
       <div className='overlay '>
         <div className='md:py-20 flex items-center justify-center '>
           <div className='2xl:w-8/12 w-11/12 md:w-10/12'>
-            <h1 className='text-white md:text-5xl text-2xl py-5 2xl:text-7xl md:mb-10 mb-5 font-bold'>
+            <h1 className='font-title text-white md:text-5xl text-2xl py-5 2xl:text-7xl md:mb-10 mb-5 font-bold'>
               Our Main Services
             </h1>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 text-white gap-5'>
@@ -18,7 +18,7 @@ export default function MainServices({ services }) {
                 data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl text-xl font-bold mb-5'>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
                   Celebration Cakes
                 </h1>
                 <FaBirthdayCake size={60} className='md:mb-10 mb-5' />
@@ -33,7 +33,9 @@ export default function MainServices({ services }) {
                 data-aos='flip-left'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl text-xl font-bold mb-5'>Pastries</h1>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
+                  Pastries
+                </h1>
                 <GiCakeSlice size={60} className='md:mb-10 mb-5' />
                 <p className='md:text-lg'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
@@ -45,7 +47,7 @@ export default function MainServices({ services }) {
                 data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl text-xl font-bold mb-5'>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
                   Party Cakes
                 </h1>
                 <MdCake size={60} className='md:mb-10 ' />
@@ -71,7 +73,7 @@ const Div = styled.div`
   background-size: cover;
   width: 100%;
   min-height: 800px;
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   .overlay {
     width: 100%;
     min-height: 800px;

@@ -10,7 +10,7 @@ const FeaturedProducts = ({ products }) => {
   return (
     <Div className='md:py-10'>
       <div className='px-6 mx-auto md:w-10/12'>
-        <h1 className='md:text-6xl text-2xl font-bold  pt-5 md:mb-5 text-yellow-900'>
+        <h1 className='md:text-6xl font-title text-2xl font-bold  pt-5 md:mb-5 text-yellow-900'>
           Our Featured Products
         </h1>
         <div className=' mb-5'>
@@ -25,13 +25,13 @@ const FeaturedProducts = ({ products }) => {
                 <a>
                   <Image
                     src={product.image.url}
-                    width={500}
+                    width={400}
                     height={400}
                     layout='responsive'
                   />
                 </a>
               </Link>
-              <p className='py-6 font-bold text-xl text-yellow-800 text-center'>
+              <p className='py-6 font-bold text-xl text-yellow-800 text-center capitalize'>
                 {product.name}
               </p>
             </div>
@@ -45,7 +45,6 @@ const FeaturedProducts = ({ products }) => {
 export default FeaturedProducts;
 
 const Div = styled.div`
-  font-family: 'Playfair Display', serif;
   .slick-list {
     margin: 0 -10px;
   }

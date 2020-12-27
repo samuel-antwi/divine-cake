@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
               </a>
             </Link>
-            <div className='nav__links hidden md:block'>
+            <div className='nav__links hidden md:block font-title'>
               <Link href='/'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600 ${
@@ -92,8 +92,5 @@ export default Navbar;
 const Div = styled.div`
   .nav__links a {
     margin: 0 20px;
-  }
-  .logo {
-    font-family: 'Playfair Display', serif;
   }
 `;
