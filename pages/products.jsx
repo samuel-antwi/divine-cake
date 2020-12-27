@@ -1,10 +1,11 @@
+import Layout from 'components/Layout';
 import React from 'react';
 
 const Products = () => {
   return (
-    <div>
+    <Layout>
       <h2>This is products section</h2>
-    </div>
+    </Layout>
   );
 };
 

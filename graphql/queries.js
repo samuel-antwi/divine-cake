@@ -1,8 +1,9 @@
 import { gql } from 'graphql-request';
 
 export const PRODUCTS = gql`
-  query getProducts {
-    products {
+  query featuredProducts($type: String!) {
+    products(where: { type: $type }) {
+      description
       id
       name
       price

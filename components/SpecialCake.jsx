@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
+
 const SpecialCake = () => {
   return (
     <Div className='bg-cover bg-center bg-no-repeat relative'>
@@ -23,7 +25,7 @@ const SpecialCake = () => {
               /> */}
             </div>
             <div className='col-span-1 xl:border-l px-6  md:px-12  py-5'>
-              <h1 className='xl:text-6xl md:text-4xl text-2xl title font-bold tracking-wide mb-5'>
+              <h1 className='font-title xl:text-6xl md:text-4xl text-2xl title font-bold tracking-wide mb-5'>
                 Our Special Cake
               </h1>
               <p className='mb-10 md:text-2xl text-gray-200 tracking-wide'>
@@ -31,9 +33,11 @@ const SpecialCake = () => {
                 that in mind, that is why we make special cakes that leave you
                 good memories forever.
               </p>
-              <button className='bg-white text-yellow-800 py-2 px-8  md:py-4 md:px-12 font-bold md:text-xl tracking-wide rounded-full hover:bg-yellow-800 hover:text-white hover:border-gray-50 border'>
-                Our Cakes
-              </button>
+              <Link href='/products'>
+                <a className='bg-white text-yellow-800 py-2 px-8  md:py-4 md:px-12 font-bold md:text-xl focus:outline-none tracking-wide rounded-full hover:bg-yellow-800 hover:text-white hover:border-gray-50 border'>
+                  Our Cakes
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,10 +51,6 @@ export default SpecialCake;
 const Div = styled.div`
   background: url('/img/hayley.jpg');
   min-height: 600px;
-
-  .title {
-    font-family: 'Playfair Display', serif;
-  }
 
   .overlay {
     background: rgba(80, 48, 33, 0.95);
