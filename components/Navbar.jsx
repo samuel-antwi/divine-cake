@@ -11,7 +11,7 @@ const Navbar = () => {
   const { pathname } = useRouter();
   const home = pathname === '/';
   const about = pathname === '/about';
-  const services = pathname === '/services';
+  const products = pathname === '/products';
   const contact = pathname === '/contact';
 
   return (
@@ -50,14 +50,14 @@ const Navbar = () => {
                   About
                 </a>
               </Link>
-              <Link href='/services'>
+              <Link href='/products'>
                 <a
                   className={`font-bold md:text-xl hover:text-yellow-600  ${
-                    services
+                    products
                       ? 'text-yellow-600 border-b-2 border-yellow-600'
                       : 'text-gray-700'
                   }`}>
-                  Services
+                  Products
                 </a>
               </Link>
               <Link href='/contact'>
@@ -71,14 +71,14 @@ const Navbar = () => {
                 </a>
               </Link>
             </div>
-            <div className='flex items-center md:hidden'>
+            <div className='flex flex-col items-center md:hidden'>
+              <p className='-mb-3'>Menu</p>
               <Hamburger
                 toggled={isOpen}
                 toggle={setOpen}
                 duration={0.8}
                 size={25}
               />
-              <p className='ml-1'>Menu</p>
             </div>
           </div>
         </div>
