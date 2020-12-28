@@ -72,7 +72,7 @@ const Contact = () => {
                   <button
                     disabled={state.submitting}
                     className='bg-gray-900 md:w-4/12 text-gray-200 py-3 px-3 mb-5 w-full focus:outline-none hover:bg-form'>
-                    Send
+                    {state.submitting ? 'Loading' : 'Send'}
                   </button>
                 </form>
               </div>

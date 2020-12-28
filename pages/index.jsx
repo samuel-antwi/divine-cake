@@ -14,7 +14,7 @@ import Layout from 'components/Layout';
 export default function Home({ products, testimonies }) {
   return (
     <Layout title='Home'>
-      <Div className='hero text-white bg-cover bg-center bg-no-repeat relative'>
+      <Div className='hero text-white bg-cover bg-center bg-no-repeat relative '>
         <div className='overlay absolute'></div>
         <div className='container'>
           <div

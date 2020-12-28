@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {isOpen && <SideNav setOpen={setOpen} isOpen={isOpen} />}
-      <Div className='bg-white text-gray-800 py-6 '>
+      <Div className='bg-white text-gray-800 md:pt-32 pt-36 py-6 '>
         <div className='md:w-10/12 mx-auto px-4'>
           <div className='flex justify-between items-center'>
             <Link href='/'>
