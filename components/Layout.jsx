@@ -8,7 +8,9 @@ const Layout = ({ title, children }) => {
     <div className='w-full'>
       <TopNavbar />
       <Navbar />
-      <Head>{title}</Head>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <div>{children}</div>
       <Footer />
     </div>

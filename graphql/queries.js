@@ -26,9 +26,24 @@ export const PRODUCTS = gql`
   }
 `;
 
+export const ALL_PRODUCTS = gql`
+  query allProducts {
+    __typename
+    products {
+      id
+      name
+      price
+      slug
+      image {
+        url
+      }
+    }
+  }
+`;
+
 export const GET_PRODUCT = gql`
-  query queryProduct($slug: String!) {
-    product(where: { slug: $slug }) {
+  query queryProduct($id: ID!) {
+    product(where: { id: $id }) {
       description
       id
       name

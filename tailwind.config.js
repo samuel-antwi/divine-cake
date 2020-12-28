@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         title: ['Playfair Display'],
+        barlow: ['Barlow'],
+        mulish: ['Mulish'],
       },
     },
     container: {

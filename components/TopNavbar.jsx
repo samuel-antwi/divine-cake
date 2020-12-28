@@ -13,11 +13,11 @@ import ReactTooltip from 'react-tooltip';
 
 const TopNavbar = () => {
   return (
-    <Div className='text-gray-100 py-5'>
+    <Div className='text-gray-100 md:py-8 py-6 bg-gray-900'>
       <div className='md:w-10/12 mx-auto px-2'>
         <div className='md:flex md:justify-between '>
-          <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0'>
-            <div className='flex items-center mr-3'>
+          <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0 text-gray-300'>
+            <div className='flex  items-center mr-3'>
               <ImPhone className='mr-2' />
               <a
                 className='font-bold hidden md:block'
@@ -88,5 +88,5 @@ const SocilaMediaStyles = styled.div`
 `;
 
 const Div = styled.div`
-  background: #4c2a2c;
+  /* background: #4c2a2c; */
 `;

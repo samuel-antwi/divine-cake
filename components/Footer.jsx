@@ -118,7 +118,7 @@ const Footer = () => {
       {isTop && (
         <BsChevronUp
           onClick={scrollToPageTop}
-          className='fixed cursor-pointer right-5 bottom-5 w-12 p-3 h-12 rounded-full text-white bg-yellow-700  '
+          className='fixed cursor-pointer right-5 bottom-5 w-10 p-3 h-10 rounded-full text-white bg-yellow-700  '
         />
       )}
     </Div>

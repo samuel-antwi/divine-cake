@@ -21,7 +21,7 @@ const FeaturedProducts = ({ products }) => {
             <div
               key={product.id}
               className=' mb-5 shadow-lg transition duration-300 ease-in-out border-b-4 border-yellow-700  transform hover:-translate-y-1 hover:scale-105 '>
-              <Link href={`/cakes/${product.slug}`}>
+              <Link href={`/product/${product.id}`}>
                 <a>
                   <Image
                     src={product.image.url}
