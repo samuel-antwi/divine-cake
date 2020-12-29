@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useForm } from '@formspree/react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Mapbox from 'components/Mapbox';
 
 const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -94,6 +95,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        {/* <Mapbox /> */}
       </Div>
     </Layout>
   );

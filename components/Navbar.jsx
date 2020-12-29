@@ -17,15 +17,15 @@ const Navbar = () => {
   return (
     <>
       {isOpen && <SideNav setOpen={setOpen} isOpen={isOpen} />}
-      <Div className='bg-white text-gray-800 md:pt-32 pt-36 py-6 '>
+      <Div className='bg-white text-gray-800 md:pt-32 pt-36 py-6'>
         <div className='md:w-10/12 mx-auto px-4'>
           <div className='flex justify-between items-center'>
             <Link href='/'>
               <a className='logo flex items-center flex-col text-yellow-700 font-extrabold md:text-4xl tracking-wide'>
                 <RiCakeFill className='text-yellow-700 md:text-7xl text-4xl' />
                 <div className='flex items-center'>
-                  <span className='text-gray-500'>DEVINE</span>
-                  <span className='cake'>CAKESGH</span>
+                  <span className='text-gray-500 font-mulish'>devine</span>
+                  <span className='cake font-mulish'>cakesgh</span>
                 </div>
               </a>
             </Link>
@@ -82,6 +82,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <hr />
       </Div>
     </>
   );
