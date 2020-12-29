@@ -13,7 +13,7 @@ import ReactTooltip from 'react-tooltip';
 
 const TopNavbar = () => {
   return (
-    <Div className='text-gray-100 md:py-8 py-6 bg-gray-900'>
+    <Div className='text-gray-100 md:py-8 py-6 bg-gray-900 fixed w-full z-20'>
       <div className='md:w-10/12 mx-auto px-2'>
         <div className='md:flex md:justify-between '>
           <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0 text-gray-300'>

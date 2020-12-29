@@ -11,7 +11,7 @@ const SideNav = ({ setOpen, isOpen }) => {
   const { pathname } = useRouter();
   const home = pathname === '/';
   const about = pathname === '/about';
-  const services = pathname === '/services';
+  const products = pathname === '/products';
   const contact = pathname === '/contact';
   return (
     <Div>
@@ -19,11 +19,11 @@ const SideNav = ({ setOpen, isOpen }) => {
         className='toggle__backround__opacity w-full min-h-screen z-20 '
         initial={{ opacity: 0, x: -400 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2 }}>
+        transition={{ duration: 1 }}>
         <motion.div
           initial={{ opacity: 0, x: -800 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           className='nav__links w-10/12 bg-white  min-h-screen'>
           <div className='flex items-center p-4 justify-between'>
             <Link href='/'>
@@ -42,6 +42,7 @@ const SideNav = ({ setOpen, isOpen }) => {
               size={25}
             />
           </div>
+          <hr />
           <div onClick={() => setOpen()} className='flex flex-col p-5'>
             <Link href='/'>
               <a
@@ -59,12 +60,12 @@ const SideNav = ({ setOpen, isOpen }) => {
                 About
               </a>
             </Link>
-            <Link href='/services'>
+            <Link href='/products'>
               <a
                 className={`font-bold text-xl mb-10 hover:text-yellow-600  ${
-                  services ? 'text-yellow-600' : 'text-gray-700'
+                  products ? 'text-yellow-600' : 'text-gray-700'
                 }`}>
-                Services
+                Products
               </a>
             </Link>
             <Link href='/contact'>
