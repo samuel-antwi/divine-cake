@@ -1,9 +1,6 @@
 import { ImPhone } from 'react-icons/im';
-import { GrMailOption } from 'react-icons/gr';
 import {
-  FaFacebookSquare,
   FaInstagram,
-  FaTwitter,
   FaRegEnvelope,
   FaWhatsapp,
   FaFacebookF,
@@ -13,7 +10,7 @@ import ReactTooltip from 'react-tooltip';
 
 const TopNavbar = () => {
   return (
-    <Div className='text-gray-100 md:py-8 py-6 bg-gray-900 fixed w-full z-20'>
+    <div className='text-gray-100 md:py-8 py-6 bg-gray-900 fixed w-full z-20'>
       <div className='md:w-10/12 mx-auto px-2'>
         <div className='md:flex md:justify-between '>
           <div className='flex text-xs xs:text-base md:text-lg mb-5 md:mb-0 justify-center justify-items-center inset-0 text-gray-300'>
@@ -38,7 +35,7 @@ const TopNavbar = () => {
           <SocialMediaIcons />
         </div>
       </div>
-    </Div>
+    </div>
   );
 };
 
@@ -85,8 +82,4 @@ const SocilaMediaStyles = styled.div`
   .social__links {
     background: #de5932;
   }
-`;
-
-const Div = styled.div`
-  /* background: #4c2a2c; */
 `;

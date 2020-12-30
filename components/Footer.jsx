@@ -1,33 +1,11 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import { RiCakeFill } from 'react-icons/ri';
-import SocialMediaIcons from './TopNavbar';
-import { GrMailOption } from 'react-icons/gr';
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaWhatsapp,
-  FaRegEnvelope,
-  FaFacebookF,
-} from 'react-icons/fa';
-import { ImPhone } from 'react-icons/im';
+import { FaInstagram, FaWhatsapp, FaFacebookF } from 'react-icons/fa';
 import { BsChevronUp } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 
-const Footer = () => {
-  const [isTop, setIsTop] = useState(false);
-
-  useEffect(() => {
-    const unSubscribe = window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        setIsTop(true);
-      } else {
-        setIsTop(false);
-      }
-      return () => unSubscribe();
-    });
-  }, []);
-
+const Footer = ({ isTop }) => {
   const scrollToPageTop = () => {
     return window.scrollTo(0, 0);
   };

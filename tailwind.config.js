@@ -25,6 +25,7 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme('colors'),
       form: '#de5931',
+      chefs: '#4d292c',
     }),
   },
   variants: {

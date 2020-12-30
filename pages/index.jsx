@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import Image from 'next/image';
 import graphcms from 'graphql/client';
 import { PRODUCTS } from 'graphql/queries';
 import styled from 'styled-components';
@@ -8,12 +6,12 @@ import FeaturedProducts from 'components/FeaturedProducts';
 import Link from 'next/link';
 import SpecialCake from 'components/SpecialCake';
 import Testimony from 'components/Testimony';
-import AOS from 'aos';
 import Layout from 'components/Layout';
+import Chefs from 'components/Chefs';
 
-export default function Home({ products, testimonies }) {
+export default function Home({ products, testimonies, chefs }) {
   return (
-    <Layout title='Home'>
+    <Layout>
       <Div className='hero text-white bg-cover bg-center bg-no-repeat relative '>
         <div className='overlay absolute'></div>
         <div className='container'>
@@ -43,18 +41,21 @@ export default function Home({ products, testimonies }) {
       <SpecialCake />
       <MainServices />
       <Testimony testimonies={testimonies} />
+      <Chefs chefs={chefs} />
     </Layout>
   );
 }
 
+// Make api request to  graphcms
 export const getStaticProps = async () => {
-  const { products, testimonies } = await graphcms.request(PRODUCTS, {
+  const { products, testimonies, chefs } = await graphcms.request(PRODUCTS, {
     type: 'featured-products',
   });
   return {
     props: {
       products,
       testimonies,
+      chefs,
     },
   };
 };

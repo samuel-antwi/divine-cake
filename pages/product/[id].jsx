@@ -17,8 +17,6 @@ const Product = ({ product }) => {
 
   const location = useRouter();
 
-  console.log(useRouter());
-
   return (
     <Layout title='Cake'>
       <Div>

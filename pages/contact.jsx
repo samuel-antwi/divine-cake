@@ -1,12 +1,9 @@
 import Layout from 'components/Layout';
 import styled from 'styled-components';
 import { useForm } from '@formspree/react';
-import { useState } from 'react';
 import { useRouter } from 'next/router';
-import Mapbox from 'components/Mapbox';
 
 const Contact = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [state, handleSubmit] = useForm('contactForm');
 
   const location = useRouter();
@@ -85,17 +82,18 @@ const Contact = () => {
                 </div>
                 <div className='mb-10'>
                   <h1 className='mb-5 text-2xl font-mulish'>Phone</h1>
-                  <p>(+233)269822198</p>
+                  <a href='tel: +233269822198'>(+233)269822198</a>
                 </div>
                 <div>
                   <h1 className='mb-5 text-2xl font-mulish'>Email</h1>
-                  <p>info@devinecakesgh.com</p>
+                  <a href='mailto: info@devinecakesgh.com'>
+                    info@devinecakesgh.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <Mapbox /> */}
       </Div>
     </Layout>
   );
