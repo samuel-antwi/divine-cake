@@ -23,6 +23,14 @@ export const PRODUCTS = gql`
         url
       }
     }
+    chefs {
+      id
+      image {
+        url
+      }
+      name
+      title
+    }
   }
 `;
 
@@ -97,6 +105,20 @@ export const ABOUT_PAGE = gql`
       image {
         url
       }
+    }
+  }
+`;
+
+export const CHEFS = gql`
+  query chefs {
+    __typename
+    chefs {
+      id
+      image {
+        url
+      }
+      name
+      title
     }
   }
 `;

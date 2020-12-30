@@ -29,7 +29,6 @@ const Products = ({ products }) => {
                   <a>
                     <Image
                       className='object-cover'
-                      objectFit='cover'
                       src={product.image.url}
                       width={500}
                       height={400}

@@ -9,20 +9,15 @@ const SpecialCake = () => {
         <div className='text-white py-10 lg:w-11/12 xl:w-9/12 mx-auto'>
           <div className='md:grid md:grid-cols-2'>
             <div className='col-span-1 pt-10 md:pt-10'>
-              <img
-                className='object-center'
-                style={{ width: 543, height: 543, objectFit: 'cover' }}
-                src='/img/happy-customer.jpg'
-                alt='Customer with cake'
-              />
-              {/* <Image
+              <Image
+                className='object-cover'
                 src='/img/happy-customer.jpg'
                 width={543}
                 height={543}
-                layout='fill'
-                objectFit='cover'
+                layout='responsive'
                 quality={100}
-              /> */}
+                alt='Customer with cake'
+              />
             </div>
             <div className='col-span-1 xl:border-l px-6  md:px-12  py-5'>
               <h1 className='font-title xl:text-6xl md:text-4xl text-2xl title font-bold tracking-wide mb-5'>

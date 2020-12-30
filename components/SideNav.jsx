@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import { RiCakeFill } from 'react-icons/ri';
 
 const SideNav = ({ setOpen, isOpen }) => {
-  //   const [isOpen, setOpen] = useState(false);
   const { pathname } = useRouter();
   const home = pathname === '/';
   const about = pathname === '/about';
@@ -91,8 +90,5 @@ const Div = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-  }
-
-  .nav__links {
   }
 `;
