@@ -49,7 +49,13 @@ const About = ({ about, testimonies }) => {
                 </h1>
                 <div className='w-20 h-1 bg-gray-600'></div>
               </div>
-              <p className='col-span-2 text-lg '>{missionStatement.text}</p>
+              {/* <p className='col-span-2 text-lg '>{missionStatement.html}</p> */}
+              <div
+                className='col-span-2 text-lg '
+                dangerouslySetInnerHTML={{
+                  __html: missionStatement.html,
+                }}
+              />
             </div>
           </div>
         </div>

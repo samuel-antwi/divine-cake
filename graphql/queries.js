@@ -85,7 +85,7 @@ export const ABOUT_PAGE = gql`
       }
       id
       missionStatement {
-        text
+        html
       }
       slug
       title
