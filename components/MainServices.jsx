@@ -18,43 +18,35 @@ export default function MainServices({ services }) {
                 data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
-                  Celebration Cakes
-                </h1>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>Celebration Cakes</h1>
                 <FaBirthdayCake size={60} className='md:mb-10 mb-5' />
                 <p className='md:text-lg'>
-                  Our Celebration cakes include, wedding, birthday, graduation
-                  and and all sort of anniversary. Our expert chefs can design
-                  your cake to suite any event. Just get in touch to see what we
-                  can do for you.
+                  Our Celebration cakes include, wedding, birthday, graduation and children and
+                  cakes. Our expert chefs can design your cake to suite any event. Just get in touch
+                  to see what we can do for you.
                 </p>
               </div>
               <div
                 data-aos='flip-left'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
-                  Pastries
-                </h1>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>Pastries</h1>
                 <GiCakeSlice size={60} className='md:mb-10 mb-5' />
                 <p className='md:text-lg'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  exercitationem nam ad eum, iure ab ratione expedita minima?
-                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
+                  We have got the best pastries in town. Whether you are looking for macrons,
+                  doughnuts, meringues or cookies, Devinecakes got you covered.
                 </p>
               </div>
               <div
                 data-aos='zoom-in'
                 data-aos-duration={2000}
                 className='col-span-1 border border-white p-5 '>
-                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>
-                  Party Cakes
-                </h1>
+                <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>Simple Cakes</h1>
                 <MdCake size={60} className='md:mb-10 ' />
                 <p className='md:text-lg'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  exercitationem nam ad eum, iure ab ratione expedita minima?
-                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
+                  Our simple cakes ranges from Gh 60 to Gh 150 and can be used for most occassions
+                  like children birthdays. Just give us 24hrs notice and your cake will be delivered
+                  to your house.
                 </p>
               </div>
             </div>

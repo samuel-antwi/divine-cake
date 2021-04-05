@@ -4,6 +4,8 @@ import { ABOUT_PAGE } from 'graphql/queries';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Testimony from 'components/Testimony';
+import ReactMarkdown from 'react-markdown';
+import { gfm } from 'remark-gfm';
 
 const About = ({ about, testimonies }) => {
   const { images, title, missionTitle, description, missionStatement } = about;
@@ -19,7 +21,7 @@ const About = ({ about, testimonies }) => {
             </div>
           </div>
         </div>
-        <div className='py-10 w-full md:w-10/12 xl:w-8/12 mx-auto '>
+        <div className='py-10 w-full md:w-10/12 xl:w-7/12 mx-auto '>
           <h1 className='capitalize font-title md:text-5xl text-3xl font-bold text-yellow-900 text-center mb-10'>
             {title}
           </h1>
@@ -49,13 +51,9 @@ const About = ({ about, testimonies }) => {
                 </h1>
                 <div className='w-20 h-1 bg-gray-600'></div>
               </div>
-              {/* <p className='col-span-2 text-lg '>{missionStatement.html}</p> */}
-              <div
-                className='col-span-2 text-lg '
-                dangerouslySetInnerHTML={{
-                  __html: missionStatement.html,
-                }}
-              />
+              <div className='col-span-2'>
+                <ReactMarkdown>{missionStatement.markdown}</ReactMarkdown>
+              </div>
             </div>
           </div>
         </div>

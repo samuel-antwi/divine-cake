@@ -47,7 +47,7 @@ export const SocialMediaIcons = () => {
       <div className='flex items-center px-4 justify-center  justify-items-center'>
         <div>
           <a
-            data-tip='Facebook'
+            // data-tip='Facebook'
             href='https://www.facebook.com/search/top?q=devinecakesgh'
             target='_blank'
             rel='noreferrer noopener'>
@@ -56,7 +56,7 @@ export const SocialMediaIcons = () => {
         </div>
         <div className='mx-5'>
           <a
-            data-tip='Instagram'
+            // data-tip='Instagram'
             href='https://www.instagram.com/devinecakesgh/'
             target='_blank'
             rel='noreferrer noopener'>
@@ -65,7 +65,7 @@ export const SocialMediaIcons = () => {
         </div>
         <div>
           <a
-            data-tip='WhatsApp'
+            // data-tip='WhatsApp'
             href='https://wa.me/233269822198'
             target='_blank'
             rel='noreferrer noopener'>
@@ -73,7 +73,7 @@ export const SocialMediaIcons = () => {
           </a>
         </div>
       </div>
-      <ReactTooltip />
+      {/* <ReactTooltip /> */}
     </SocilaMediaStyles>
   );
 };
