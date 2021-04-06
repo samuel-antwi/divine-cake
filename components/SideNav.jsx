@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Squash as Hamburger } from 'hamburger-react';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { RiCakeFill } from 'react-icons/ri';
 
@@ -10,7 +9,7 @@ const SideNav = ({ setOpen, isOpen }) => {
   const { pathname } = useRouter();
   const home = pathname === '/';
   const about = pathname === '/about';
-  const products = pathname === '/products';
+  const cakes = pathname === '/cakes';
   const contact = pathname === '/contact';
   return (
     <Div>
@@ -34,12 +33,7 @@ const SideNav = ({ setOpen, isOpen }) => {
                 </div>
               </a>
             </Link>
-            <Hamburger
-              toggled={isOpen}
-              toggle={setOpen}
-              duration={0.8}
-              size={25}
-            />
+            <Hamburger toggled={isOpen} toggle={setOpen} duration={0.8} size={25} />
           </div>
           <hr />
           <div onClick={() => setOpen()} className='flex flex-col p-5'>
@@ -62,9 +56,9 @@ const SideNav = ({ setOpen, isOpen }) => {
             <Link href='/products'>
               <a
                 className={`font-bold text-xl mb-10 hover:text-yellow-600  ${
-                  products ? 'text-yellow-600' : 'text-gray-700'
+                  cakes ? 'text-yellow-600' : 'text-gray-700'
                 }`}>
-                Products
+                Cakes
               </a>
             </Link>
             <Link href='/contact'>
