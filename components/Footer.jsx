@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { RiCakeFill } from 'react-icons/ri';
 import { FaInstagram, FaWhatsapp, FaFacebookF } from 'react-icons/fa';
 import { BsChevronUp } from 'react-icons/bs';
-import { useEffect, useState } from 'react';
 
 const Footer = ({ isTop }) => {
   const scrollToPageTop = () => {
@@ -14,8 +13,8 @@ const Footer = ({ isTop }) => {
 
   return (
     <Div className='relative'>
-      <div className='text-white container  divide-y'>
-        <div className='lg:grid lg:grid-cols-5 gap-20 md:py-20 py-10'>
+      <div className='text-white max-w-6xl mx-auto  divide-y'>
+        <div className='lg:grid lg:grid-cols-6 gap-20 md:py-20 py-10'>
           <div className='col-span-2 mb-8'>
             <Link href='/'>
               <a className='logo flex items-center  mb-5 footer__logo'>
@@ -63,7 +62,7 @@ const Footer = ({ isTop }) => {
               </div>
             </div>
           </div>
-          <div className='col-span-1 mb-8'>
+          <div className='col-span-2 mb-8'>
             <h1 className='font-bold md:text-2xl text-xl mb-5'>Openeing Hours</h1>
             <div className=' font-bold text-gray-400'>
               <p>Our work timings:</p>
@@ -72,7 +71,7 @@ const Footer = ({ isTop }) => {
               <p>Bank holidays: 8am - 6pm</p>
             </div>
           </div>
-          <div className='col-span-1 mb-8 text-gray-400   font-bold'>
+          <div className='col-span-2 mb-8 text-gray-400   font-bold'>
             <h1 className='font-bold md:text-2xl text-white text-xl mb-5'>Contact Info</h1>
             <div className='flex items-center mb-2 '>
               <a href='tel: +233246562686'>(+233) 269822198</a>
@@ -80,7 +79,7 @@ const Footer = ({ isTop }) => {
             <div className='flex items-center text-gray-400'>
               <a href='mailto: info@devinecake.com'>info@devinecakesgh.com</a>
             </div>
-            <p>Accra</p>
+            <p>Adenta Frafraha, near Ampomah Estate, Accra</p>
           </div>
         </div>
         <div className='border border-gray-600 w-full'></div>

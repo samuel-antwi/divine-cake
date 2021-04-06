@@ -36,9 +36,7 @@ const Products = ({ cakes }) => {
                 </Link>
                 <div className='p-3 text-center capitalize'>
                   <p className='font-bold text-xl text-yellow-800 font-title'>{product.name}</p>
-                  <p className='text-lg font-barlow font-semibold text-gray-700'>
-                    GH{product.price}
-                  </p>
+                  <p className='text-lg font-barlow pt-4 font-semibold text-gray-700'>From GH60</p>
                 </div>
               </div>
             ))}
