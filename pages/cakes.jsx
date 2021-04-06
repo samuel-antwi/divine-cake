@@ -1,12 +1,12 @@
 import Layout from 'components/Layout';
 import graphcms from 'graphql/client';
-import { ALL_PRODUCTS } from 'graphql/queries';
+import { HOME_PAGE } from 'graphql/queries';
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-const Products = ({ products }) => {
+const Products = ({ cakes }) => {
   return (
     <Layout title='Products'>
       <Div className='bg-gray-100'>
@@ -21,15 +21,13 @@ const Products = ({ products }) => {
         </div>
         <div className='xl:w-8/12 md:w-10/12   mx-auto py-20 px-6'>
           <div className='md:grid xl:grid-cols-3 md:grid-cols-2 gap-10'>
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className=' shadow-lg mb-5 rounded-xl bg-white'>
-                <Link href={`/product/${product.id}`}>
+            {cakes.map((product) => (
+              <div key={product.id} className=' shadow-lg mb-5 rounded-xl bg-white'>
+                <Link href={`/cake/${product.slug}`}>
                   <a>
                     <Image
                       className='object-cover'
-                      src={product.image.url}
+                      src={product.images[0].url}
                       width={500}
                       height={400}
                       layout='fill'
@@ -37,15 +35,23 @@ const Products = ({ products }) => {
                   </a>
                 </Link>
                 <div className='p-3 text-center capitalize'>
-                  <p className='font-bold text-xl text-yellow-800 font-title'>
-                    {product.name}
-                  </p>
+                  <p className='font-bold text-xl text-yellow-800 font-title'>{product.name}</p>
                   <p className='text-lg font-barlow font-semibold text-gray-700'>
                     GH{product.price}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+          <div className='max-w-xs mx-auto mt-10'>
+            <a
+              href='https://www.instagram.com/devinecakesgh/'
+              target='_blank'
+              rel='noreferrer noopener'>
+              <button className='border focus:outline-none py-2 w-full border-gray-500 capitalize hover:bg-gray-900 hover:text-gray-50 transition ease-in-out duration-200'>
+                view all
+              </button>
+            </a>
           </div>
         </div>
       </Div>
@@ -56,10 +62,10 @@ const Products = ({ products }) => {
 export default Products;
 
 export const getStaticProps = async () => {
-  const { products } = await graphcms.request(ALL_PRODUCTS);
+  const { cakes } = await graphcms.request(HOME_PAGE);
   return {
     props: {
-      products,
+      cakes,
     },
   };
 };

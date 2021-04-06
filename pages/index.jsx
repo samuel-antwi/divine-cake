@@ -1,5 +1,5 @@
 import graphcms from 'graphql/client';
-import { PRODUCTS } from 'graphql/queries';
+import { HOME_PAGE } from 'graphql/queries';
 import styled from 'styled-components';
 import MainServices from 'components/MainServices';
 import FeaturedProducts from 'components/FeaturedProducts';
@@ -9,7 +9,7 @@ import Testimony from 'components/Testimony';
 import Layout from 'components/Layout';
 import Chefs from 'components/Chefs';
 
-export default function Home({ products, testimonies, chefs }) {
+export default function Home({ testimonies, chefs, cakes }) {
   return (
     <Layout>
       <Div className='hero text-white bg-cover bg-center bg-no-repeat relative '>
@@ -17,16 +17,16 @@ export default function Home({ products, testimonies, chefs }) {
         <div className='container'>
           <div
             data-aos='fade-up'
-            data-aos-duration={2000}
+            data-aos-duration={700}
             className='absolute inset-0 px-6 md:w-10/12 2xl:w-7/12 mx-auto flex items-center justify-center '>
             <div>
               <h1 className='font-title text-2xl tracking-wider md:text-7xl font-extrabold text-gray-100 mb-5'>
                 The Best Cakes and Pastries
               </h1>
               <p className='md:text-2xl text-gray-300 md:mb-10 mb-5'>
-                Cupcakes, custom cakes from the finest ingredients. All cakes
-                are made from scratch. Our prices are wholesale prices and
-                unbeatable. Get in touch with us to place your order now.
+                Cupcakes, custom cakes from the finest ingredients. All cakes are made from scratch.
+                Our prices are wholesale prices and unbeatable. Get in touch with us to place your
+                order now.
               </p>
               <Link href='/products'>
                 <a className='md:text-2xl focus:outline-none font-bold hero__btn md:py-5 md:px-8 py-3 px-6 rounded-full hover:bg-yellow-900'>
@@ -37,7 +37,7 @@ export default function Home({ products, testimonies, chefs }) {
           </div>
         </div>
       </Div>
-      <FeaturedProducts products={products} />
+      <FeaturedProducts products={cakes} />
       <SpecialCake />
       <MainServices />
       <Testimony testimonies={testimonies} />
@@ -48,14 +48,12 @@ export default function Home({ products, testimonies, chefs }) {
 
 // Make api request to  graphcms
 export const getStaticProps = async () => {
-  const { products, testimonies, chefs } = await graphcms.request(PRODUCTS, {
-    type: 'featured-products',
-  });
+  const { testimonies, chefs, cakes } = await graphcms.request(HOME_PAGE);
   return {
     props: {
-      products,
       testimonies,
       chefs,
+      cakes,
     },
   };
 };

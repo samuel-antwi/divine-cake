@@ -6,22 +6,22 @@ import Rating from 'react-rating';
 import Image from 'next/image';
 import { BsStar, BsStarFill } from 'react-icons/bs';
 import { FaQuoteLeft } from 'react-icons/fa';
-import { settings } from 'functions/slick';
+import { settings, slickSettings } from 'functions/slick';
 
 const Testimony = ({ testimonies }) => {
   return (
-    <Div className='bg-gray-200'>
-      <div className='container py-10 mx-auto'>
+    <Div className='bg-gray-200 pb-8 px-5'>
+      <div className='max-w-7xl py-10 mx-auto'>
         <div className='mb-5'>
           <h1 className='md:text-4xl text-2xl font-title font-bold text-center mb-5  pt-5 md:mb-10 text-yellow-900'>
             What Our Customers Are Saying
           </h1>
           <div className='max-w-sm mx-auto w-20 h-1 bg-gray-600'></div>
         </div>
-        <Slider {...settings}>
+        <Slider {...settings(testimonies.length)}>
           {testimonies.map((testimony) => (
-            <div className=' bg-white p-5 shadow-xl ' key={testimony.id}>
-              <div className='flex justify-between items-center mb-5 '>
+            <div key={testimony.id} className=' bg-white p-5 xl:h-[600px] xs:h-[700px] h-[800px]'>
+              <div className='flex justify-between  items-center mb-5'>
                 <Image
                   className='rounded-full'
                   src={testimony.image.url}
@@ -40,12 +40,8 @@ const Testimony = ({ testimonies }) => {
                 initialRating={testimony.rating}
                 emptySymbol={<BsStar size={20} />}
               />
-              <p className='text-lg text-gray-600 mb-10'>
-                {testimony.review.text}
-              </p>
-              <p className='md:text-xl font-semibold text-gray-700 mb-3'>
-                {testimony.name}
-              </p>
+              <p className='text-lg text-gray-600 mb-10'>{testimony.review.text}</p>
+              <p className='md:text-xl font-semibold text-gray-700 mb-3'>{testimony.name}</p>
               <p className='text-gray-400'>Customer</p>
             </div>
           ))}
