@@ -14,7 +14,8 @@ const SpecialCake = () => {
                 src='/img/happy-customer.jpg'
                 width={543}
                 height={543}
-                layout='responsive'
+                priority={true}
+                loading='eager'
                 quality={100}
                 alt='Customer with cake'
               />
