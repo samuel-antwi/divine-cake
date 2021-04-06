@@ -7,7 +7,6 @@ import Link from 'next/link';
 import SpecialCake from 'components/SpecialCake';
 import Testimony from 'components/Testimony';
 import Layout from 'components/Layout';
-import Chefs from 'components/Chefs';
 
 export default function Home({ testimonies, chefs, cakes }) {
   return (
@@ -15,10 +14,7 @@ export default function Home({ testimonies, chefs, cakes }) {
       <Div className='hero text-white bg-cover bg-center bg-no-repeat relative '>
         <div className='overlay absolute'></div>
         <div className='container'>
-          <div
-            data-aos='fade-up'
-            data-aos-duration={700}
-            className='absolute inset-0 px-6 md:w-10/12 2xl:w-7/12 mx-auto flex items-center justify-center '>
+          <div className='absolute inset-0 px-6 md:w-10/12 2xl:w-7/12 mx-auto flex items-center justify-center '>
             <div>
               <h1 className='font-title text-2xl tracking-wider md:text-7xl font-extrabold text-gray-100 mb-5'>
                 The Best Cakes and Pastries
@@ -28,7 +24,7 @@ export default function Home({ testimonies, chefs, cakes }) {
                 Our prices are wholesale prices and unbeatable. Get in touch with us to place your
                 order now.
               </p>
-              <Link href='/products'>
+              <Link href='/cakes'>
                 <a className='md:text-2xl focus:outline-none font-bold hero__btn md:py-5 md:px-8 py-3 px-6 rounded-full hover:bg-yellow-900'>
                   View Our Cakes
                 </a>
@@ -41,7 +37,6 @@ export default function Home({ testimonies, chefs, cakes }) {
       <SpecialCake />
       <MainServices />
       <Testimony testimonies={testimonies} />
-      <Chefs chefs={chefs} />
     </Layout>
   );
 }
