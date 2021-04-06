@@ -13,7 +13,7 @@ const Footer = ({ isTop }) => {
 
   return (
     <Div className='relative'>
-      <div className='text-white max-w-6xl mx-auto  divide-y'>
+      <div className='text-white max-w-6xl mx-auto px-6  divide-y'>
         <div className='lg:grid lg:grid-cols-6 gap-20 md:py-20 py-10'>
           <div className='col-span-2 mb-8'>
             <Link href='/'>
