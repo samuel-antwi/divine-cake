@@ -8,7 +8,7 @@ import { slickSettings } from 'functions/slick';
 
 const FeaturedProducts = ({ products }) => {
   return (
-    <Div className='md:py-10'>
+    <Div className='md:py-10 bg-gray-200'>
       <div className='px-6 mx-auto md:w-10/12'>
         <h1 className='md:text-6xl font-title text-2xl font-bold  pt-5 md:mb-5 text-yellow-900'>
           Our Featured Products
@@ -16,18 +16,19 @@ const FeaturedProducts = ({ products }) => {
         <div className=' mb-5'>
           <div className='w-24 h-1 bg-yellow-900'></div>
         </div>
-        <Slider {...slickSettings}>
+        <Slider {...slickSettings(products.length)}>
           {products.map((product) => (
             <div
               key={product.id}
               className=' mb-5 shadow-lg transition duration-300 ease-in-out border-b-4 border-yellow-700  transform hover:-translate-y-1 hover:scale-105 '>
-              <Link href={`/product/${product.id}`}>
+              <Link href={`/cake/${product.slug}`}>
                 <a>
                   <Image
-                    src={product.image.url}
-                    width={400}
-                    height={400}
-                    layout='responsive'
+                    src={product.images[0].url}
+                    width={600}
+                    height={600}
+                    loading='eager'
+                    priority={true}
                   />
                 </a>
               </Link>

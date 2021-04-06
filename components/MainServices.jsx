@@ -44,9 +44,9 @@ export default function MainServices({ services }) {
                 <h1 className='md:text-2xl font-title text-xl font-bold mb-5'>Simple Cakes</h1>
                 <MdCake size={60} className='md:mb-10 ' />
                 <p className='md:text-lg'>
-                  Our simple cakes ranges from Gh 60 to Gh 150 and can be used for most occassions
-                  like children birthdays. Just give us 24hrs notice and your cake will be delivered
-                  to your house.
+                  Our simple cakes range from Gh60 to Gh150 and can be used for most occassions like
+                  children birthdays. Just give us 24hrs notice and your cake will be delivered to
+                  your house.
                 </p>
               </div>
             </div>
@@ -79,24 +79,3 @@ const Div = styled.div`
     }
   }
 `;
-
-{
-  /* <div className='col-span-1 border border-white p-5'>
-                <h1 className='md:text-2xl text-xl font-bold mb-5'>
-                  Party Cakes
-                </h1>
-                <p className='md:text-lg'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  exercitationem nam ad eum, iure ab ratione expedita minima?
-                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
-                </p>
-              </div>
-              <div className='col-span-1 border border-white p-5'>
-                <h1 className='md:text-2xl text-xl font-bold mb-5'>Pastries</h1>
-                <p className='md:text-lg'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  exercitationem nam ad eum, iure ab ratione expedita minima?
-                  Quaerat esse molestias nemo velit, eligendi, architecto ipsum.
-                </p>
-              </div> */
-}

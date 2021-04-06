@@ -24,11 +24,10 @@ const SpecialCake = () => {
                 Our Special Cake
               </h1>
               <p className='mb-10 md:text-2xl text-gray-200 tracking-wide'>
-                Every special occasion deserves a special treat. We always have
-                that in mind, that is why we make special cakes that leave you
-                good memories forever.
+                Every special occasion deserves a special treat. We always have that in mind, that
+                is why we make special cakes that leave you good memories forever.
               </p>
-              <Link href='/products'>
+              <Link href='/cakes'>
                 <a className='bg-white text-yellow-800 py-2 px-8  md:py-4 md:px-12 font-bold md:text-xl focus:outline-none tracking-wide rounded-full hover:bg-yellow-800 hover:text-white hover:border-gray-50 border'>
                   Our Cakes
                 </a>

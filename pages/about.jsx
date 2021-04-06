@@ -25,18 +25,11 @@ const About = ({ about, testimonies }) => {
           <h1 className='capitalize font-title md:text-5xl text-3xl font-bold text-yellow-900 text-center mb-10'>
             {title}
           </h1>
-          <p className='text-lg text-gray-700 mb-10 px-6 md:px-0'>
-            {description.text}
-          </p>
+          <p className='text-lg text-gray-700 mb-10 px-6 md:px-0'>{description.text}</p>
           <div className='md:grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {images.map((image) => (
               <div key={image.id} className='mb-5 col-span-1'>
-                <Image
-                  src={image.url}
-                  width={500}
-                  height={350}
-                  layout='responsive'
-                />
+                <Image src={image.url} width={500} height={350} layout='responsive' />
               </div>
             ))}
           </div>
@@ -47,12 +40,20 @@ const About = ({ about, testimonies }) => {
             <div className='md:grid md:grid-cols-3 gap-10 px-6'>
               <div className='col-span-1 mb-5'>
                 <h1 className='font-title md:text-4xl text-2xl mb-5 tracking-wide text-yellow-900 font-bold capitalize'>
-                  {missionTitle}
+                  Our Services
                 </h1>
                 <div className='w-20 h-1 bg-gray-600'></div>
               </div>
               <div className='col-span-2'>
-                <ReactMarkdown>{missionStatement.markdown}</ReactMarkdown>
+                <p>
+                  Of course, even the most delicious cake can become sad and stale if it’s left too
+                  long on the bakery shelf, which is why we take pride in our same-day delivery
+                  system. Our bespoke special occasion and celebration cakes are made to order
+                  within just 30 minutes, 7 days a week (till 8pm); within a few hours they are
+                  hand-delivered to your doorstep, or as a same-day gift. For a personalised,
+                  handmade cake which is delivered within hours of coming out of the oven, our
+                  unique services can’t be beat.
+                </p>
               </div>
             </div>
           </div>

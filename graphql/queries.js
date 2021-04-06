@@ -1,17 +1,7 @@
 import { gql } from 'graphql-request';
 
-export const PRODUCTS = gql`
-  query featuredProducts($type: String!) {
-    products(where: { type: $type }) {
-      description
-      id
-      name
-      price
-      slug
-      image {
-        url
-      }
-    }
+export const HOME_PAGE = gql`
+  query homePage {
     testimonies {
       rating
       name
@@ -20,6 +10,17 @@ export const PRODUCTS = gql`
         text
       }
       image {
+        url
+      }
+    }
+    cakes {
+      id
+      name
+      price
+      slug
+      images {
+        height
+        width
         url
       }
     }
@@ -34,30 +35,30 @@ export const PRODUCTS = gql`
   }
 `;
 
-export const ALL_PRODUCTS = gql`
+export const ALL_CAKES = gql`
   query allProducts {
     __typename
-    products {
+    cakes {
       id
       name
       price
       slug
-      image {
+      images {
         url
       }
     }
   }
 `;
 
-export const GET_PRODUCT = gql`
-  query queryProduct($id: ID!) {
-    product(where: { id: $id }) {
+export const GET_CAKE = gql`
+  query queryCake($slug: String!) {
+    cake(where: { slug: $slug }) {
       description
       id
       name
       price
       slug
-      image {
+      images {
         url
       }
       reviews {
