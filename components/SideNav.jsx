@@ -53,7 +53,7 @@ const SideNav = ({ setOpen, isOpen }) => {
                 About
               </a>
             </Link>
-            <Link href='/products'>
+            <Link href='/cakes'>
               <a
                 className={`font-bold text-xl mb-10 hover:text-yellow-600  ${
                   cakes ? 'text-yellow-600' : 'text-gray-700'
